@@ -26,7 +26,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/commitizen_emoji"
+      "path": "./node_modules/commitizen-emoji"
     }
   }
 }
