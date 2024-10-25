@@ -1,5 +1,18 @@
-<script lang="ts">
-import { UiGenericStyledButton } from '#build/components';
+<script setup lang="ts">
+const sendEmail = async (e: Event) => {
+  e.preventDefault();
+  const form = e.target as HTMLFormElement;
+  const formData = new FormData(form);
+  const response = await fetch('/api/send-email', {
+    method: 'POST',
+    body: formData,
+  });
+  if (response.ok) {
+    alert('Email sent successfully');
+  } else {
+    alert('Email failed to send');
+  }
+};
 
 </script>
 
@@ -7,18 +20,18 @@ import { UiGenericStyledButton } from '#build/components';
   <div>
 
     <h1 class="mt-[100px] font-bold font-custom text-[30px] text-center">Send me a meassage</h1>
-    <form class="space-y-4 mx-[16px] mt-[50px] font-custom" action="" method="post">
+    <form class="space-y-4 mx-[16px] mt-[50px] font-custom">
       <div>
         <label class="block" for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required />
       </div>
       <div>
         <label class="block" for="email">Email:</label>
-        <input type="email" name="email">
+        <input type="email" name="email" />
       </div>
       <div>
         <label class="block" for="phone">Phone:</label>
-        <input type="email" name="phone">
+        <input type="email" name="phone" />
       </div>
       <div>
         <label class="block" for="message">Message:</label>
