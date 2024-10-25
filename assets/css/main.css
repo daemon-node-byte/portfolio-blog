@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-900 text-zinc-200 text-base;
+}
+
+#__nuxt {
+  @apply min-h-[100vh];
+}
+
+input {
+  @apply mt-1 h-10 outline-none w-full rounded-lg bg-zinc-700 focus:ring-indigo-400 font-custom px-4;
+}

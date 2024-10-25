@@ -1,0 +1,34 @@
+<script lang="ts">
+import { UiGenericStyledButton } from '#build/components';
+
+</script>
+
+<template>
+  <div>
+
+    <h1 class="mt-[100px] font-bold font-custom text-[30px] text-center">Send me a meassage</h1>
+    <form class="space-y-4 mx-[16px] mt-[50px] font-custom" action="" method="post">
+      <div>
+        <label class="block" for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label class="block" for="email">Email:</label>
+        <input type="email" name="email">
+      </div>
+      <div>
+        <label class="block" for="phone">Phone:</label>
+        <input type="email" name="phone">
+      </div>
+      <div>
+        <label class="block" for="message">Message:</label>
+        <textarea name="message" class="bg-zinc-700 mt-1 rounded-lg w-full h-64"></textarea>
+        
+      </div>
+      <div class="pt-6">
+        <UiGenericStyledButton text="Send" TwStyles="w-full" />
+      </div>
+      
+    </form>
+  </div>
+</template>

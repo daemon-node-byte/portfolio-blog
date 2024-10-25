@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "commit": "git-cz"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.10.2",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "clsx": "^2.1.1",
+    "nuxt": "^3.13.2",
+    "radix-vue": "^1.9.7",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
+  "devDependencies": {
+    "commitizen": "^4.3.1",
+    "commitizen-emoji": "^1.0.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/commitizen_emoji"
+    }
+  }
+}
