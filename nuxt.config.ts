@@ -11,10 +11,18 @@ export default defineNuxtConfig({
       mode: 'out-in',
     }
   },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxt/fonts",
-  ],
+  content: {
+    highlight: {
+      theme: 'monokai',
+      langs: ['javascript', 'typescript', 'json', 'html', 'css', 'scss', 'markdown', 'bash', 'shell', 'yaml', 'xml', 'python', 'java', 'csharp', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'dart', 'groovy', 'powershell', 'sql', 'c']
+    },
+    markdown: {
+      remarkPlugins: ['remark-gfm'],
+      rehypePlugins: [],
+      
+    }
+  },
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "@nuxt/content"],
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
     config: {

@@ -4,6 +4,7 @@ const links = [
   { name: 'Home', url: '/' },
   { name: 'About', url: '/about' },
   { name: 'Contact', url: '/contact' },
+  { name: 'Blog', url: '/blog' },
 ];
 const $route = useRoute();
 
