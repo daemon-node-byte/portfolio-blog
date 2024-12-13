@@ -1,4 +1,8 @@
+<script setup lang="ts">
+import { inject } from '@vercel/analytics';
+</script>
 <template>
+{{ inject() }}
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
