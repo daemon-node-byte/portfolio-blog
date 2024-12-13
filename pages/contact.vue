@@ -17,7 +17,7 @@ const sendEmail = async (e: Event) => {
 </script>
 
 <template>
-  <div class="mx-auto md:mt-52 max-w-[420px]">
+  <div class="mx-auto md:mt-36 max-w-[420px]">
 
     <h1 class="mt-[100px] font-bold font-custom text-[30px] text-center">Send me a meassage</h1>
     <form class="space-y-4 mx-[16px] mt-[50px] font-custom">
