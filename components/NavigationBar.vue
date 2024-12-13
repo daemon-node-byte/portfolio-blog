@@ -3,8 +3,9 @@ import clsx from 'clsx';
 const links = [
   { name: 'Home', url: '/' },
   { name: 'About', url: '/about' },
-  { name: 'Contact', url: '/contact' },
   { name: 'Blog', url: '/blog' },
+  { name: 'Projects', url: '/projects' },
+  { name: 'Contact', url: '/contact' },
 ];
 const $route = useRoute();
 
@@ -21,3 +22,9 @@ const $route = useRoute();
     </TransitionGroup>
   </nav>
 </template>
+
+<style scoped>
+ul {
+  list-style: none;
+}
+</style>
