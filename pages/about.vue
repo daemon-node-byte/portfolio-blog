@@ -23,7 +23,7 @@
     </article>
     <div class="flex justify-center my-8 w-full">
 
-      <UiGenericStyledButton fileName="ATS bold classic resume - full.docx" fileUrl="/resources/ATS bold classic resume - full.docx" text="Download Resume" />
+      <UiGenericStyledButton fileName="JoshMcLain_SoftwareEngineer_CV.pdf" fileUrl="resources/JoshMcLain_SoftwareEngineer_CV.pdf" text="Download Resume" />
     </div>
   </section>
 </template>

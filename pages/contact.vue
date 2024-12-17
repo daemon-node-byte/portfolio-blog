@@ -1,17 +1,14 @@
 <script setup lang="ts">
 const sendEmail = async (e: Event) => {
   e.preventDefault();
-  const form = e.target as HTMLFormElement;
-  const formData = new FormData(form);
-  const response = await fetch('/api/send-email', {
+  const formData = new FormData(document.getElementById('formEle') as HTMLFormElement);
+  await $fetch('/api/email', {
     method: 'POST',
-    body: formData,
-  });
-  if (response.ok) {
-    alert('Email sent successfully');
-  } else {
-    alert('Email failed to send');
-  }
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: parseFormDataToJson(formData)
+  })
 };
 
 </script>
@@ -20,7 +17,7 @@ const sendEmail = async (e: Event) => {
   <div class="mx-auto md:mt-36 max-w-[420px]">
 
     <h1 class="mt-[100px] font-bold font-custom text-[30px] text-center">Send me a meassage</h1>
-    <form class="space-y-4 mx-[16px] mt-[50px] font-custom">
+    <form id="formEle" class="space-y-4 mx-[16px] mt-[50px] font-custom">
       <div>
         <label class="block" for="name">Name:</label>
         <input type="text" id="name" name="name" required />
@@ -31,7 +28,7 @@ const sendEmail = async (e: Event) => {
       </div>
       <div>
         <label class="block" for="phone">Phone:</label>
-        <input type="email" name="phone" />
+        <input type="text" name="phone" />
       </div>
       <div>
         <label class="block" for="message">Message:</label>
@@ -39,7 +36,7 @@ const sendEmail = async (e: Event) => {
         
       </div>
       <div class="pt-6">
-        <UiGenericStyledButton text="Send" TwStyles="w-full" />
+        <UiGenericStyledButton text="Send" TwStyles="w-full" :onClick="sendEmail" />
       </div>
       
     </form>
