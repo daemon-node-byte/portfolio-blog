@@ -8,19 +8,18 @@ const { data: docs } = await useAsyncData('content', () =>
 </script>
 
 <template>
-  <main class="pt-14 h-full">
-    <h1>Content List</h1>
+  <main class="pt-14 max-w-[1000px] h-full">
     
-      <div class="flex">
+      <div class="flex flex-wrap">
 
         
         <NuxtLink v-for="doc in docs" :to="`${doc._path}`" :key="doc._path">
-          <div class="border w-[300px] h-[200px]">
-            
-            <h3>
+          <div class="p-4 border rounded-lg mx-2 my-4 w-[400px]">
+            <img :src="doc.cover" :alt="doc.title" />
+            <h3 class="mt-4 mb-2 text-xl">
               {{ doc.title }}
             </h3>
-            <p>{{ doc.de }}</p>
+            <p class="text-sm">{{ doc.description }}</p>
 
           </div>
         </NuxtLink>

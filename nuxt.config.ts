@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
+  ssr: true,
   devtools: { enabled: true },
+  runtimeConfig: {
+    postmarkApiKey: process.env.EMAIL_API_KEY,
+    emailRecipient: process.env.SRC_EMAIL,
+  },
   app: {
     head:{
       title: "J.McLain's Portfolio",
@@ -22,7 +27,7 @@ export default defineNuxtConfig({
       
     }
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "@nuxt/content"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "@nuxt/content", "@nuxt/icon"],
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
     config: {
